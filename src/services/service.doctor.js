@@ -1,5 +1,9 @@
-function Listar() {
-  res.status(200).send("Aqui vamos listar os médicos");
+import repoDoctor from "../repositories/repository.doctor.js";
+
+async function Listar() {
+
+  const doctors = await repoDoctor.Listar();
+  return doctors;
 }
 
 export default { Listar }
