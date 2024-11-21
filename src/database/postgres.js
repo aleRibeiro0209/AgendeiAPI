@@ -1,12 +1,14 @@
 import pkg from "pg";
+import config from "../core/config.js";
+
 const { Pool } = pkg;
 
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "agendeijs",
-  password: "Duplaricale@01",
-  port: 5432,
+  user: config.dbUser,
+  host: config.dbHost,
+  database: config.dbName,
+  password: config.dbPassword,
+  port: config.dbPort,
 });
 
 // Função genérica para executar consultas ao banco
