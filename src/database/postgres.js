@@ -9,6 +9,9 @@ const pool = new Pool({
   database: config.dbName,
   password: config.dbPassword,
   port: config.dbPort,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 // Função genérica para executar consultas ao banco
