@@ -4,11 +4,7 @@ import config from "../core/config.js";
 const { Pool } = pkg;
 
 const pool = new Pool({
-  user: config.dbUser,
-  host: config.dbHost,
-  database: config.dbName,
-  password: config.dbPassword,
-  port: config.dbPort,
+  connectionString: config.dbUrl,
   ssl: false
 });
 

@@ -4,6 +4,7 @@ const env = dotenv.config().parsed || process.env;
 
 const config = {
   port: env.PORT || 3001,
+  dbUrl: env.DB_URL,
   dbUser: env.DB_USER,
   dbHost: env.DB_HOST,
   dbPort: env.DB_PORT,
