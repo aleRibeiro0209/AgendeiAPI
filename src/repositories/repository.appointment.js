@@ -8,7 +8,7 @@ async function Listar(id_user) {
       S.description AS service,
       D.name AS doctor,
       D.specialty,
-      TO_CHAR(A.booking_date, 'YYYY-MM-DD') AS booking_date,
+      A.booking_date,
       A.booking_hour,
       U.name AS user,
       DS.price
